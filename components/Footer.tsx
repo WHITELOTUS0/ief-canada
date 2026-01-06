@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = {
   main: [
@@ -9,10 +10,13 @@ const navigation = {
     { name: "Donate", href: "/donate" },
   ],
   programs: [
+    { name: "Friends of the Kingdom", href: "/programs#friends-of-the-kingdom" },
     { name: "Bible Studies", href: "/programs#bible-studies" },
     { name: "ESL Program", href: "/programs#esl" },
     { name: "Youth Ministry", href: "/programs#youth" },
     { name: "Forgiveness Centre", href: "/programs#forgiveness" },
+    { name: "Theological Research", href: "/programs#theological-research" },
+    { name: "Trauma & Healing Center", href: "/programs#trauma-healing" },
   ],
   social: [
     {
@@ -61,9 +65,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
-                <span className="text-white font-serif font-bold text-lg">IEF</span>
-              </div>
+              <Image
+                src="/ief-logo.png"
+                alt="IEF Canada Logo"
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <p className="font-serif font-semibold text-white text-lg">
                   IEF Canada
@@ -73,6 +81,9 @@ export default function Footer() {
             <p className="mt-4 text-cream-200 text-sm leading-relaxed">
               Building Canadian Unity Through Christian Fellowship, Work & Study.
               Uniting believers across denominational boundaries.
+            </p>
+            <p className="mt-2 text-gold-500 text-xs font-medium">
+              Registered Charity #1630931-3
             </p>
           </div>
 
@@ -114,6 +125,16 @@ export default function Footer() {
           <div>
             <h3 className="font-serif font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <span className="text-cream-200">
+                  11 Ruddington Drive<br />
+                  North York, Ontario M2K 2J6
+                </span>
+              </li>
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-gold-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />

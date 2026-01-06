@@ -5,10 +5,28 @@ import Button from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "Our Programs | IEF Canada",
-  description: "Explore IEF Canada's programs including Bible Studies, ESL, Youth Ministry, and the Toronto Forgiveness Centre.",
+  description: "Explore IEF Canada's programs including Friends of the Kingdom, Bible Studies, ESL, Youth Ministry, Toronto Forgiveness Centre, Theological Research, and the Trauma and Healing Center.",
 };
 
 const programs = [
+  {
+    id: "friends-of-the-kingdom",
+    title: "Friends of the Kingdom",
+    subtitle: "Building a Community of Faith & Fellowship",
+    description: "Friends of the Kingdom brings together believers from all backgrounds to nurture faith, build community, and foster unity across generations. Through this program, we create inclusive spaces where faith can flourish and lasting friendships are formed.",
+    features: [
+      "Regular fellowship gatherings and community events",
+      "Spiritual guidance and mentorship opportunities",
+      "Meaningful programs that transform lives",
+      "Building a foundation of faith for generations to come",
+    ],
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+      </svg>
+    ),
+  },
   {
     id: "bible-studies",
     title: "Bible Studies",
@@ -96,6 +114,25 @@ const programs = [
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+      </svg>
+    ),
+  },
+  {
+    id: "trauma-healing",
+    title: "Trauma and Healing Center",
+    subtitle: "Toronto Initiative for Theological Research & Trauma Healing",
+    description: "Our Trauma and Healing Center cultivates a future where individuals and communities find healing from trauma through understanding, compassion, and the integration of theological insights, fostering spiritual and emotional wellness.",
+    features: [
+      "Healing through theology - integrating theological research with trauma healing practices",
+      "Workshops and training to equip clergy and community leaders with trauma-informed skills",
+      "Community support for individuals to share experiences and find guidance in healing journeys",
+      "Research on the intersections of theology, trauma, and healing",
+      "Advocacy for mental health and trauma-informed healing practices within religious communities",
+    ],
+    image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
       </svg>
     ),
   },

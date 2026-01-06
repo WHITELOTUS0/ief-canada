@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navigation = [
@@ -19,9 +20,13 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-burgundy-800 rounded-full flex items-center justify-center">
-              <span className="text-white font-serif font-bold text-lg">IEF</span>
-            </div>
+            <Image
+              src="/ief-logo.png"
+              alt="IEF Canada Logo"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain"
+            />
             <div className="hidden sm:block">
               <p className="font-serif font-semibold text-burgundy-800 text-lg leading-tight">
                 IEF Canada
