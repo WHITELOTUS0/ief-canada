@@ -17,13 +17,56 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "IEF Canada | International Ecumenical Fellowship",
+  metadataBase: new URL("https://iefcanada.org"),
+  title: {
+    default: "IEF Canada | International Ecumenical Fellowship",
+    template: "%s | IEF Canada",
+  },
   description: "Building Canadian Unity Through Christian Fellowship, Work & Study. Join us in fostering ecumenical unity and relationships that transcend denominational boundaries.",
-  keywords: ["IEF Canada", "ecumenical fellowship", "Christian unity", "Toronto church", "bible study", "youth ministry"],
+  keywords: ["IEF Canada", "ecumenical fellowship", "Christian unity", "Toronto church", "bible study", "youth ministry", "interfaith", "community"],
+  authors: [{ name: "IEF Canada" }],
+  creator: "IEF Canada",
+  publisher: "International Ecumenical Fellowship Canada",
+  icons: {
+    icon: "/ief-logo.png",
+    apple: "/ief-logo.png",
+  },
   openGraph: {
     title: "IEF Canada | International Ecumenical Fellowship",
-    description: "Building Canadian Unity Through Christian Fellowship, Work & Study",
+    description: "Building Canadian Unity Through Christian Fellowship, Work & Study. Uniting believers across denominational boundaries.",
+    url: "https://iefcanada.org",
+    siteName: "IEF Canada",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "IEF Canada - Building Canadian Unity Through Christian Fellowship",
+      },
+    ],
+    locale: "en_CA",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IEF Canada | International Ecumenical Fellowship",
+    description: "Building Canadian Unity Through Christian Fellowship, Work & Study",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // Add your Google Search Console verification code here when you have it
+    // google: "your-google-verification-code",
   },
 };
 
