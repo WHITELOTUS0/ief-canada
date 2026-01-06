@@ -227,8 +227,8 @@ export default function Home() {
               </div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=800&q=80"
-                  alt="Community members together"
+                  src="/niagara.jpeg"
+                  alt="Niagara Falls - IEF Canada community outing"
                   fill
                   className="object-cover"
                 />
@@ -284,8 +284,8 @@ export default function Home() {
             </div>
             <div className="relative aspect-[4/3] lg:aspect-auto rounded-2xl overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&q=80"
-                alt="Welcoming community"
+                src="/maple-tree.jpeg"
+                alt="Beautiful Canadian maple tree"
                 fill
                 className="object-cover"
               />

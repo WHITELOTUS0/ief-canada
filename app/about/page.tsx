@@ -30,7 +30,7 @@ const team = [
   {
     name: "Pierre Celestin Niyongere",
     role: "Chapter Leader",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    image: "/celestin-pierre.jpeg",
     bio: "Leading IEF Canada's mission to unite believers across Christian traditions in fellowship, faith, and service.",
   },
 ];
@@ -88,8 +88,8 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&q=80"
-                  alt="Community gathering in prayer"
+                  src="/trent-university-sculpture.jpeg"
+                  alt="Religious sculpture at Trent University"
                   fill
                   className="object-cover"
                 />

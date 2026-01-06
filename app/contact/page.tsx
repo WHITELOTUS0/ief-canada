@@ -19,12 +19,24 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setStatus("sent");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Reset form after success
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      if (response.ok) {
+        setStatus("sent");
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (
@@ -182,6 +194,30 @@ export default function ContactPage() {
                     className="mt-6"
                   >
                     Send Another Message
+                  </Button>
+                </div>
+              ) : status === "error" ? (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-red-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-charcoal-900">
+                    Something went wrong
+                  </h3>
+                  <p className="text-charcoal-600 mt-2">
+                    Please try again or email us directly at{" "}
+                    <a href="mailto:iefcecumenica@gmail.com" className="text-burgundy-800 hover:underline">
+                      iefcecumenica@gmail.com
+                    </a>
+                  </p>
+                  <Button
+                    onClick={() => setStatus("idle")}
+                    variant="outline"
+                    className="mt-6"
+                  >
+                    Try Again
                   </Button>
                 </div>
               ) : (
