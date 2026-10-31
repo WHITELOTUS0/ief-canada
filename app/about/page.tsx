@@ -32,6 +32,8 @@ const team = [
     role: "Chapter Leader",
     image: "/celestin-pierre.jpeg",
     bio: "Leading IEF Canada's mission to unite believers across Christian traditions in fellowship, faith, and service.",
+    phone: "+1 519-780-7393",
+    email: "iefcanadatoday@gmail.com",
   },
 ];
 
@@ -237,6 +239,20 @@ export default function AboutPage() {
                   </h3>
                   <p className="text-burgundy-700 font-medium">{member.role}</p>
                   <p className="mt-3 text-charcoal-600">{member.bio}</p>
+                  <div className="mt-4 space-y-1 text-sm">
+                    <a
+                      href={`tel:${member.phone.replace(/[^+\d]/g, "")}`}
+                      className="block text-charcoal-700 hover:text-burgundy-700 transition-colors"
+                    >
+                      {member.phone}
+                    </a>
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="block text-charcoal-700 hover:text-burgundy-700 transition-colors"
+                    >
+                      {member.email}
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
