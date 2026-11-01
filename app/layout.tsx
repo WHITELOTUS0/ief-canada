@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import EventBanner from "@/components/EventBanner";
 import Footer from "@/components/Footer";
 
 const dmSans = DM_Sans({
@@ -134,6 +135,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${dmSans.variable} ${sourceSerif.variable} antialiased`}>
+        <EventBanner />
         <Header />
         <main>{children}</main>
         <Footer />

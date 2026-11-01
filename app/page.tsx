@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import ProgramCard from "@/components/ProgramCard";
+import UpcomingEvent from "@/components/UpcomingEvent";
 
 const programs = [
   {
@@ -133,6 +134,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Upcoming Event */}
+      <UpcomingEvent />
 
       {/* Values Section */}
       <section className="py-20 lg:py-28 bg-cream-50">
